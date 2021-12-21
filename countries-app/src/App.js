@@ -1,6 +1,7 @@
 import './App.css';
 import React,{useState, useEffect} from 'react';
 import CountriesList from './CountriesList';
+import FilterForm from './FilterForm';
 
 const countriesUrl = "https://restcountries.com/v3.1/all";
 
@@ -20,8 +21,21 @@ function App() {
     getCountries();
   }, []);
 
+  function search(column, keyword) {
+    if (column === 'all') {
+
+    }else{
+      
+    }
+  }
+
+  function search(columns, keyword){
+
+  }
+
   return (
     <div className="App">
+      <FilterForm search={search}/>
       <CountriesList countries={countries} />
     </div>
   );
